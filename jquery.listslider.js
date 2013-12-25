@@ -10,21 +10,17 @@
         function slideLi (newPosition) {
         
             var element = el.find('li:nth-child('+ currentPosition +')');
-            var elementDiv = el.find('li:nth-child('+ currentPosition +') div');
         
             switch(settings.animationType) {
                 case 'swing':
                     element.hide(settings.animationSpeed);
-                    elementDiv.hide(settings.animationSpeed);
                     break;
                 case 'linear':
                     element.hide(settings.animationSpeed, 'linear');
-                    elementDiv.hide(settings.animationSpeed, 'linear');
                     break;
                 case 'fade':
                 default:
                     element.fadeOut(settings.animationSpeed);
-                    elementDiv.fadeOut(settings.animationSpeed);
                     break;
             }
             
@@ -43,21 +39,17 @@
             }
             
             element = el.find('li:nth-child('+ currentPosition +')');
-            elementDiv = el.find('li:nth-child('+ currentPosition +') div');
 
             switch(settings.animationType) {
                 case 'swing':
                     element.show(settings.animationSpeed);
-                    elementDiv.delay(settings.divDelay).show(settings.animationSpeed);
                     break;
                 case 'linear':
                     element.show(settings.animationSpeed, 'linear');
-                    elementDiv.delay(settings.divDelay).show(settings.animationSpeed, 'linear');
                     break;
                 case 'fade':
                 default:
                     element.fadeIn(settings.animationSpeed);
-                    elementDiv.delay(settings.divDelay).fadeIn(settings.animationSpeed);
                     break;
             }
          }
@@ -93,9 +85,6 @@
             
             $this.find('li').css('display', 'none');
             $this.find('li:first-child').css('display', 'block');
-            
-            $this.find('li div').css('display', 'none');
-            $this.find('li:first-child div').css('display', 'block');
             
             if (settings.showPagination) {
                 var listString = '';
