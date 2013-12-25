@@ -1,7 +1,7 @@
 (function($) {
 
-    $.fn.slider = function (options) {
-        var settings = $.extend({}, $.fn.slider.defaults, options);
+    $.fn.listslider = function (options) {
+        var settings = $.extend({}, $.fn.listslider.defaults, options);
         var numberOfChildren;
         var el;
         var currentPosition;
@@ -118,7 +118,7 @@
     };
     
     // DEFAULT SETTINGS
-    $.fn.slider.defaults = {
+    $.fn.listslider.defaults = {
         
         // position where the slider starts
         startPosition: 1,
